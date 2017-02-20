@@ -1,0 +1,43 @@
+body {
+	background-image: url('nature.jpg');
+	background-size: 1400px 700px;
+	/*background-repeat: no-repeat;*/
+	color: white;
+}
+
+.gifDiv {
+	float: left;
+	display: inline;
+}
+
+img.gif {
+	height: 150px;
+}
+
+button {
+	padding: 5px;
+	margin: 3px;
+	background-color: #3daa5c;
+	color: white;
+}
+
+.container{
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#submit {
+	margin-top: 25px;
+}
+
+
+#gif-here {
+	float: left;
+	display: inline-block;
+	width: 100%;
+}
+
+#addBtn{
+	float: right;
+}

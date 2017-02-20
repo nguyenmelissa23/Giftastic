@@ -4,7 +4,7 @@
 
 
 //ARRAY and BUTTONS 
-var topics = ["dog", "cat", "rabbit",];
+var topics = ["german", "canada", "greenland", "united states", "china", "sweden", "norway", "iceland", "australia", "brazil"];
 
 //Working :)
 function createButtons(){
@@ -21,7 +21,7 @@ function createButtons(){
 $("#submit").on('click', function(){
 	//on submit, create a new button
 	var newBtn = $("<button>");
-	newBtn.attr("class", "animalBtn");
+	newBtn.attr("class", "topicName");
 	//get the user input from the val()
 	var animalText = $("input[name=animalName]").val();
 	console.log(animalText);
@@ -43,7 +43,7 @@ $("#allButtons").on('click', "button.topicName", function(){
 	var queryURL = "http://api.giphy.com/v1/gifs/search?"
 	+ "q=" + animal 
 	+ "&api_key=" + api
-	+ "&limit=" + limit ;
+	+ "&limit=" + limit;
 	console.log(queryURL);
 
 	$.ajax({url:queryURL, method:'GET'})
@@ -52,7 +52,8 @@ $("#allButtons").on('click', "button.topicName", function(){
 		for (i=0; i < limit; i++){
 			var results = response.data;
 			var newdiv = $("<div>");
-			newdiv.append("<p>Rating: </p>");
+			newdiv.addClass("gifDiv");
+			newdiv.append("<p>Rating: "+ results[i].rating +"</p>");
 			var animalImg = "<img src='" 
 				+ results[i].images.fixed_height_still.url+ "' " 
 				+ "data-still='" 

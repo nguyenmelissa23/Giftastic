@@ -3,21 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<title>Giftastic</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-	<div id="allButtons">
-	</div>
+	<div id="allButtons" class="container"></div>
 	
-	<div id="gifs-here"> 
-	
+	<div id="main" class="container"> 
+		
+		<div id="addBtn">
+			<h3>Add a country</h3>
+			<input type="text" name="animalName"><br>
+			<button id="submit">Submit</button>
+		</div>
+		<div id="gifs-here"></div>
 	</div>
 
-	<div id="addBtn">
-		<h3>Add an animal</h3>
-		<input type="text" name="animalName"><br>
-		<button id="submit">Submit</button>
-	</div>
-	
 	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="app.js">
 		
