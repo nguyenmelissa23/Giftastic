@@ -8,30 +8,37 @@ var topics = ["german", "canada", "greenland", "united states", "china", "sweden
 
 //Working :)
 function createButtons(){
+	$("#allButtons").text("");
 	for (i=0 ; i < topics.length ; i++){
 		var name = topics[i];
 		var newBtn = ("<button class='topicName' data-animal='" 
 			+ name + "'>"
 			+ name +"</button>");	
 		$("#allButtons").append(newBtn);
+		//newBtn.on("click", )
 	}
 }
 
 //SUBMIT BUTTON - Working :) 
-$("#submit").on('click', function(){
-	//on submit, create a new button
-	var newBtn = $("<button>");
-	newBtn.attr("class", "topicName");
-	//get the user input from the val()
-	var animalText = $("input[name=animalName]").val();
-	console.log(animalText);
-	newBtn.attr("data-animal", animalText);
-	console.log(newBtn.attr("data-animal"));
-	//put the user input in the button 
-	newBtn.append(animalText);
-	$("#allButtons").append(newBtn);
-	$("input[name=animalName]").html("");
-});
+
+
+
+// $("#submit").on('click', function(){
+// 	//on submit, create a new button
+// 	var newBtn = $("<button>");
+// 	newBtn.attr("class", "topicName");
+// 	//get the user input from the val()
+// 	var animalText = $("input[name=countryName]").val();
+// 	console.log(animalText);
+// 	newBtn.attr("data-animal", animalText);
+// 	console.log(newBtn.attr("data-animal"));
+// 	//put the user input in the button 
+// 	newBtn.append(animalText);
+// 	$("#allButtons").append(newBtn);
+// 	$("input[name=animalName]").html("");
+// });
+
+
 
 //ANIMAL BUTTON	Working	
 $("#allButtons").on('click', "button.topicName", function(){
@@ -115,3 +122,11 @@ function gifDiv(){
 }
 
 createButtons();
+
+$("#submit").on('click', function(){
+	var animalText = $("input[name=countryName]").val();
+ 	topics.push(animalText);
+ 	console.log(topics);
+ 	createButtons();
+})
+

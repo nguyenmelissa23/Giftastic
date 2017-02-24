@@ -2,7 +2,6 @@ body {
 	background-image: url('../images/nature.jpg');
 	background-size: 1400px 700px;
 	/*background-repeat: no-repeat;*/
-	color: white;
 }
 
 .gifDiv {
@@ -13,6 +12,7 @@ body {
 img.gif {
 	height: 150px;
 }
+
 
 button {
 	padding: 5px;
@@ -32,12 +32,18 @@ button {
 }
 
 
-#gif-here {
+#gifs-here {
 	float: left;
-	display: inline-block;
-	width: 100%;
+	display: inline;
+	width:100%;
+	max-width: 680px;
+	color: white;
 }
 
 #addBtn{
 	float: right;
+}
+
+h3{
+	color: white;
 }
