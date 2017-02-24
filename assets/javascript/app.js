@@ -47,7 +47,7 @@ $("#allButtons").on('click', "button.topicName", function(){
 	var animal = $(this).attr("data-animal");
 	var limit = 10;
 	console.log(animal);
-	var queryURL = "http://api.giphy.com/v1/gifs/search?"
+	var queryURL = "https://api.giphy.com/v1/gifs/search?"
 	+ "q=" + animal 
 	+ "&api_key=" + api
 	+ "&limit=" + limit;
